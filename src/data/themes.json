@@ -1,0 +1,84 @@
+{
+  "themes": [
+    {
+      "id": "matrix",
+      "name": "Matrix",
+      "backgroundColor": "#0D0208",
+      "textColor": "#00FF41",
+      "promptColor": "#00FF41",
+      "highlightColor": "#00FF41",
+      "errorColor": "#F97068",
+      "successColor": "#00FF41"
+    },
+    {
+      "id": "dracula",
+      "name": "Dracula",
+      "backgroundColor": "#282A36",
+      "textColor": "#F8F8F2",
+      "promptColor": "#BD93F9",
+      "highlightColor": "#FF79C6",
+      "errorColor": "#FF5555",
+      "successColor": "#50FA7B"
+    },
+    {
+      "id": "monokai",
+      "name": "Monokai",
+      "backgroundColor": "#272822",
+      "textColor": "#F8F8F2",
+      "promptColor": "#A6E22E",
+      "highlightColor": "#F92672",
+      "errorColor": "#F92672",
+      "successColor": "#A6E22E"
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "backgroundColor": "#2E3440",
+      "textColor": "#D8DEE9",
+      "promptColor": "#88C0D0",
+      "highlightColor": "#81A1C1",
+      "errorColor": "#BF616A",
+      "successColor": "#A3BE8C"
+    },
+    {
+      "id": "solarized",
+      "name": "Solarized Dark",
+      "backgroundColor": "#002B36",
+      "textColor": "#839496",
+      "promptColor": "#2AA198",
+      "highlightColor": "#268BD2",
+      "errorColor": "#DC322F",
+      "successColor": "#859900"
+    },
+    {
+      "id": "github",
+      "name": "GitHub Dark",
+      "backgroundColor": "#0D1117",
+      "textColor": "#C9D1D9",
+      "promptColor": "#58A6FF",
+      "highlightColor": "#58A6FF",
+      "errorColor": "#F85149",
+      "successColor": "#3FB950"
+    },
+    {
+      "id": "cyberpunk",
+      "name": "Cyberpunk",
+      "backgroundColor": "#120458",
+      "textColor": "#FCE4EC",
+      "promptColor": "#F637EC",
+      "highlightColor": "#FAFA37",
+      "errorColor": "#F637EC",
+      "successColor": "#00FFD1"
+    },
+    {
+      "id": "retro",
+      "name": "Retro DOS",
+      "backgroundColor": "#000000",
+      "textColor": "#FFFFFF",
+      "promptColor": "#00FFFF",
+      "highlightColor": "#FFFF00",
+      "errorColor": "#FF0000",
+      "successColor": "#00FF00"
+    }
+  ]
+}

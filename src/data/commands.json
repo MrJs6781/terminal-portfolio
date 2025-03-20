@@ -33,6 +33,14 @@
       "description": "Opens my resume in a new tab"
     },
     {
+      "name": "themes",
+      "description": "Lists available terminal themes"
+    },
+    {
+      "name": "theme [name]",
+      "description": "Changes the terminal theme"
+    },
+    {
       "name": "clear",
       "description": "Clears the terminal"
     }
