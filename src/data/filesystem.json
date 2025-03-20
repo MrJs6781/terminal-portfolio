@@ -1,0 +1,59 @@
+{
+  "root": {
+    "type": "directory",
+    "children": {
+      "home": {
+        "type": "directory",
+        "children": {
+          "user": {
+            "type": "directory",
+            "children": {
+              "about.txt": {
+                "type": "file",
+                "content": "Hi there! I'm a passionate developer with experience in building web applications using modern technologies. Welcome to my terminal portfolio!"
+              },
+              "skills.txt": {
+                "type": "file",
+                "content": "My technical skills include:\n- Frontend: React, Next.js, TypeScript, JavaScript, HTML/CSS\n- Backend: Node.js, Express, Python\n- Database: MongoDB, PostgreSQL\n- Tools: Git, Docker, AWS"
+              },
+              "contact.txt": {
+                "type": "file",
+                "content": "You can reach me at:\nEmail: your.email@example.com\nPhone: +1 (123) 456-7890\nGitHub: github.com/yourusername\nLinkedIn: linkedin.com/in/yourusername"
+              },
+              "projects": {
+                "type": "directory",
+                "children": {
+                  "project1.txt": {
+                    "type": "file",
+                    "content": "E-commerce Platform\n\nA full-stack e-commerce application with user authentication, product catalog, shopping cart, and payment integration.\n\nTechnologies: React, Node.js, MongoDB, Stripe"
+                  },
+                  "project2.txt": {
+                    "type": "file",
+                    "content": "Task Management App\n\nA Kanban-style task management application with drag-and-drop functionality and team collaboration features.\n\nTechnologies: React, Firebase, Tailwind CSS"
+                  },
+                  "project3.txt": {
+                    "type": "file",
+                    "content": "Weather Dashboard\n\nA weather application that displays current and forecasted weather data for multiple locations.\n\nTechnologies: JavaScript, OpenWeather API, Chart.js"
+                  }
+                }
+              },
+              "resume": {
+                "type": "directory",
+                "children": {
+                  "education.txt": {
+                    "type": "file",
+                    "content": "Education:\n\nBachelor of Science in Computer Science\nUniversity Name | 2016-2020\n\nFull Stack Web Development Bootcamp\nCoding Academy | Jan 2020 - Mar 2020"
+                  },
+                  "experience.txt": {
+                    "type": "file",
+                    "content": "Work Experience:\n\nSenior Frontend Developer\nTech Company Inc. | Jan 2022 - Present\n\nFrontend Developer\nDigital Agency | Mar 2020 - Dec 2021"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

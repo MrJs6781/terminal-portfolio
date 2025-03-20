@@ -137,6 +137,22 @@ body {
   }
 }
 
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 .cursor-blink::after {
   content: "|";
   margin-left: 2px;
@@ -149,16 +165,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2);
+  background: hsl(222, 47%, 11%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: hsl(215, 16%, 27%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: hsl(215, 16%, 35%);
 }
 
 /* Theme transition effects */

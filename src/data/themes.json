@@ -1,84 +1,94 @@
 {
   "themes": [
     {
-      "id": "matrix",
-      "name": "Matrix",
-      "backgroundColor": "#0D0208",
-      "textColor": "#00FF41",
-      "promptColor": "#00FF41",
-      "highlightColor": "#00FF41",
-      "errorColor": "#F97068",
-      "successColor": "#00FF41"
+      "id": "classic-terminal",
+      "name": "Classic Terminal",
+      "backgroundColor": "#1F2937",
+      "textColor": "#E5E7EB",
+      "promptColor": "#10B981",
+      "highlightColor": "#FBBF24",
+      "errorColor": "#F87171",
+      "successColor": "#10B981"
     },
     {
-      "id": "dracula",
-      "name": "Dracula",
-      "backgroundColor": "#282A36",
-      "textColor": "#F8F8F2",
-      "promptColor": "#BD93F9",
-      "highlightColor": "#FF79C6",
-      "errorColor": "#FF5555",
-      "successColor": "#50FA7B"
+      "id": "electric-pulse",
+      "name": "Electric Pulse",
+      "backgroundColor": "#0D1B2A",
+      "textColor": "#E0E7FF",
+      "promptColor": "#00F5D4",
+      "highlightColor": "#FFBA08",
+      "errorColor": "#FF4D6D",
+      "successColor": "#00F5D4"
     },
     {
-      "id": "monokai",
-      "name": "Monokai",
-      "backgroundColor": "#272822",
-      "textColor": "#F8F8F2",
-      "promptColor": "#A6E22E",
-      "highlightColor": "#F92672",
-      "errorColor": "#F92672",
-      "successColor": "#A6E22E"
+      "id": "cosmic-vibe",
+      "name": "Cosmic Vibe",
+      "backgroundColor": "#1B1036",
+      "textColor": "#E9D8FD",
+      "promptColor": "#FF6ACF",
+      "highlightColor": "#FFD93D",
+      "errorColor": "#FF3D71",
+      "successColor": "#4ADEDE"
     },
     {
-      "id": "nord",
-      "name": "Nord",
-      "backgroundColor": "#2E3440",
-      "textColor": "#D8DEE9",
-      "promptColor": "#88C0D0",
-      "highlightColor": "#81A1C1",
-      "errorColor": "#BF616A",
-      "successColor": "#A3BE8C"
+      "id": "cyber-edge",
+      "name": "Cyber Edge",
+      "backgroundColor": "#0F1419",
+      "textColor": "#D1D5DB",
+      "promptColor": "#38BDF8",
+      "highlightColor": "#F59E0B",
+      "errorColor": "#EF4444",
+      "successColor": "#10B981"
     },
     {
-      "id": "solarized",
-      "name": "Solarized Dark",
-      "backgroundColor": "#002B36",
-      "textColor": "#839496",
-      "promptColor": "#2AA198",
-      "highlightColor": "#268BD2",
-      "errorColor": "#DC322F",
-      "successColor": "#859900"
+      "id": "neon-rush",
+      "name": "Neon Rush",
+      "backgroundColor": "#1A002E",
+      "textColor": "#F3E8FF",
+      "promptColor": "#D946EF",
+      "highlightColor": "#FCD34D",
+      "errorColor": "#F43F5E",
+      "successColor": "#22D3EE"
     },
     {
-      "id": "github",
-      "name": "GitHub Dark",
-      "backgroundColor": "#0D1117",
-      "textColor": "#C9D1D9",
-      "promptColor": "#58A6FF",
-      "highlightColor": "#58A6FF",
-      "errorColor": "#F85149",
-      "successColor": "#3FB950"
+      "id": "solar-circuit",
+      "name": "Solar Circuit",
+      "backgroundColor": "#2B1A0F",
+      "textColor": "#FEE2E2",
+      "promptColor": "#F59E0B",
+      "highlightColor": "#FCD34D",
+      "errorColor": "#DC2626",
+      "successColor": "#34D399"
     },
     {
-      "id": "cyberpunk",
-      "name": "Cyberpunk",
-      "backgroundColor": "#120458",
-      "textColor": "#FCE4EC",
-      "promptColor": "#F637EC",
-      "highlightColor": "#FAFA37",
-      "errorColor": "#F637EC",
-      "successColor": "#00FFD1"
+      "id": "glacial-code",
+      "name": "Glacial Code",
+      "backgroundColor": "#0C1821",
+      "textColor": "#DBEAFE",
+      "promptColor": "#60A5FA",
+      "highlightColor": "#FBBF24",
+      "errorColor": "#F87171",
+      "successColor": "#2DD4BF"
     },
     {
-      "id": "retro",
-      "name": "Retro DOS",
-      "backgroundColor": "#000000",
-      "textColor": "#FFFFFF",
-      "promptColor": "#00FFFF",
+      "id": "vapor-glow",
+      "name": "Vapor Glow",
+      "backgroundColor": "#2A1540",
+      "textColor": "#EDE9FE",
+      "promptColor": "#A78BFA",
+      "highlightColor": "#F9A8D4",
+      "errorColor": "#F472B6",
+      "successColor": "#6EE7B7"
+    },
+    {
+      "id": "retro-blitz",
+      "name": "Retro Blitz",
+      "backgroundColor": "#0A0F0D",
+      "textColor": "#D4D4D4",
+      "promptColor": "#00FFAA",
       "highlightColor": "#FFFF00",
-      "errorColor": "#FF0000",
-      "successColor": "#00FF00"
+      "errorColor": "#FF4040",
+      "successColor": "#00FFAA"
     }
   ]
 }

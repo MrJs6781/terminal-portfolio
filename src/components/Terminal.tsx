@@ -29,12 +29,13 @@ const Terminal = () => {
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [themes, setThemes] = useState<Theme[]>(themesData.themes);
-  const [currentTheme, setCurrentTheme] = useState<Theme>(themesData.themes[0]);
+  const [currentTheme, setCurrentTheme] = useState<Theme>(themesData.themes[5]);
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
 
   // Initialize terminal with welcome message
   useEffect(() => {
+    console.log("Current Theme:", currentTheme);
     if (!isInitialized) {
       const welcomeOutput = (
         <div className={`text-${currentTheme.successColor}`}>
@@ -572,12 +573,17 @@ const Terminal = () => {
 
       <div
         ref={terminalRef}
-        className={`flex-1 bg-${currentTheme.backgroundColor} p-4 overflow-y-auto font-mono text-sm text-${currentTheme.textColor} rounded-b-md`}
+        className="flex-1 p-4 overflow-y-auto font-mono text-sm rounded-b-md"
         style={{
-          backgroundColor: currentTheme.backgroundColor.startsWith("#")
-            ? currentTheme.backgroundColor
-            : undefined,
+          backgroundColor: currentTheme.backgroundColor,
+          color: currentTheme.textColor,
         }}
+        // className={`flex-1 bg-${currentTheme.backgroundColor} p-4 overflow-y-auto font-mono text-sm text-${currentTheme.textColor} rounded-b-md`}
+        // style={{
+        //   backgroundColor: currentTheme.backgroundColor.startsWith("#")
+        //     ? currentTheme.backgroundColor
+        //     : undefined,
+        // }}
       >
         {history.map((item, index) => (
           <div key={index} className="mb-4">

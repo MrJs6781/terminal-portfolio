@@ -1,0 +1,134 @@
+{
+  "en": {
+    "welcome": "Welcome to my terminal portfolio! Type 'help' to see available commands.",
+    "commands": {
+      "help": "Shows available commands",
+      "about": "Displays information about me",
+      "skills": "Lists my technical skills",
+      "projects": "Shows my portfolio projects",
+      "experience": "Displays my work experience",
+      "education": "Shows my educational background",
+      "contact": "Displays my contact information",
+      "resume": "Opens my resume in a new tab",
+      "clear": "Clears the terminal",
+      "ls": "Lists files and directories",
+      "cd": "Changes current directory",
+      "cat": "Displays the content of a file",
+      "pwd": "Shows the current directory path",
+      "download": "Shows downloadable content",
+      "lang": "Changes the language (en, es, fr, de)",
+      "theme": "Changes the terminal theme (dark, light)"
+    },
+    "notFound": "Command not found: {0}. Type 'help' to see available commands.",
+    "section": {
+      "skills": "Technical Skills",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "tools": "Tools",
+      "projects": "Projects",
+      "experience": "Work Experience",
+      "education": "Education",
+      "contact": "Contact Information",
+      "downloadable": "Downloadable Content"
+    }
+  },
+  "es": {
+    "welcome": "¡Bienvenido a mi portafolio de terminal! Escribe 'help' para ver los comandos disponibles.",
+    "commands": {
+      "help": "Muestra los comandos disponibles",
+      "about": "Muestra información sobre mí",
+      "skills": "Lista mis habilidades técnicas",
+      "projects": "Muestra mis proyectos de portafolio",
+      "experience": "Muestra mi experiencia laboral",
+      "education": "Muestra mi formación académica",
+      "contact": "Muestra mi información de contacto",
+      "resume": "Abre mi currículum en una nueva pestaña",
+      "clear": "Limpia la terminal",
+      "ls": "Lista archivos y directorios",
+      "cd": "Cambia el directorio actual",
+      "cat": "Muestra el contenido de un archivo",
+      "pwd": "Muestra la ruta del directorio actual",
+      "download": "Muestra contenido descargable",
+      "lang": "Cambia el idioma (en, es, fr, de)",
+      "theme": "Cambia el tema de la terminal (dark, light)"
+    },
+    "notFound": "Comando no encontrado: {0}. Escribe 'help' para ver los comandos disponibles.",
+    "section": {
+      "skills": "Habilidades Técnicas",
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "tools": "Herramientas",
+      "projects": "Proyectos",
+      "experience": "Experiencia Laboral",
+      "education": "Educación",
+      "contact": "Información de Contacto",
+      "downloadable": "Contenido Descargable"
+    }
+  },
+  "fr": {
+    "welcome": "Bienvenue sur mon portfolio terminal ! Tapez 'help' pour voir les commandes disponibles.",
+    "commands": {
+      "help": "Affiche les commandes disponibles",
+      "about": "Affiche des informations sur moi",
+      "skills": "Liste mes compétences techniques",
+      "projects": "Affiche mes projets de portfolio",
+      "experience": "Affiche mon expérience professionnelle",
+      "education": "Affiche ma formation académique",
+      "contact": "Affiche mes informations de contact",
+      "resume": "Ouvre mon CV dans un nouvel onglet",
+      "clear": "Efface le terminal",
+      "ls": "Liste les fichiers et répertoires",
+      "cd": "Change de répertoire courant",
+      "cat": "Affiche le contenu d'un fichier",
+      "pwd": "Affiche le chemin du répertoire courant",
+      "download": "Affiche le contenu téléchargeable",
+      "lang": "Change la langue (en, es, fr, de)",
+      "theme": "Change le thème du terminal (dark, light)"
+    },
+    "notFound": "Commande non trouvée : {0}. Tapez 'help' pour voir les commandes disponibles.",
+    "section": {
+      "skills": "Compétences Techniques",
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "tools": "Outils",
+      "projects": "Projets",
+      "experience": "Expérience Professionnelle",
+      "education": "Formation",
+      "contact": "Coordonnées",
+      "downloadable": "Contenu Téléchargeable"
+    }
+  },
+  "de": {
+    "welcome": "Willkommen zu meinem Terminal-Portfolio! Geben Sie 'help' ein, um verfügbare Befehle zu sehen.",
+    "commands": {
+      "help": "Zeigt verfügbare Befehle an",
+      "about": "Zeigt Informationen über mich an",
+      "skills": "Listet meine technischen Fähigkeiten auf",
+      "projects": "Zeigt meine Portfolio-Projekte an",
+      "experience": "Zeigt meine Berufserfahrung an",
+      "education": "Zeigt meinen Bildungshintergrund an",
+      "contact": "Zeigt meine Kontaktinformationen an",
+      "resume": "Öffnet meinen Lebenslauf in einem neuen Tab",
+      "clear": "Löscht das Terminal",
+      "ls": "Listet Dateien und Verzeichnisse auf",
+      "cd": "Ändert das aktuelle Verzeichnis",
+      "cat": "Zeigt den Inhalt einer Datei an",
+      "pwd": "Zeigt den Pfad des aktuellen Verzeichnisses an",
+      "download": "Zeigt herunterladbare Inhalte an",
+      "lang": "Ändert die Sprache (en, es, fr, de)",
+      "theme": "Ändert das Terminal-Thema (dark, light)"
+    },
+    "notFound": "Befehl nicht gefunden: {0}. Geben Sie 'help' ein, um verfügbare Befehle zu sehen.",
+    "section": {
+      "skills": "Technische Fähigkeiten",
+      "languages": "Sprachen",
+      "frameworks": "Frameworks",
+      "tools": "Werkzeuge",
+      "projects": "Projekte",
+      "experience": "Berufserfahrung",
+      "education": "Ausbildung",
+      "contact": "Kontaktinformationen",
+      "downloadable": "Herunterladbare Inhalte"
+    }
+  }
+}
