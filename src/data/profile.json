@@ -1,0 +1,13 @@
+{
+  "name": "Your Name",
+  "title": "Full Stack Developer",
+  "location": "City, Country",
+  "email": "your.email@example.com",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername",
+  "bio": "I'm a passionate developer with experience in building web applications using modern technologies. I love solving complex problems and creating intuitive user experiences.",
+  "profileImage": "/images/profile.jpg",
+  "resumeUrl": "/files/resume.pdf",
+  "terminalTitle": "welcome.sh",
+  "welcomeMessage": "Welcome to my terminal portfolio! Type 'help' to see available commands."
+}

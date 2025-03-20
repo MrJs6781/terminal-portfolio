@@ -1,0 +1,40 @@
+{
+  "commands": [
+    {
+      "name": "help",
+      "description": "Shows available commands"
+    },
+    {
+      "name": "about",
+      "description": "Displays information about me"
+    },
+    {
+      "name": "skills",
+      "description": "Lists my technical skills"
+    },
+    {
+      "name": "projects",
+      "description": "Shows my portfolio projects"
+    },
+    {
+      "name": "experience",
+      "description": "Displays my work experience"
+    },
+    {
+      "name": "education",
+      "description": "Shows my educational background"
+    },
+    {
+      "name": "contact",
+      "description": "Displays my contact information"
+    },
+    {
+      "name": "resume",
+      "description": "Opens my resume in a new tab"
+    },
+    {
+      "name": "clear",
+      "description": "Clears the terminal"
+    }
+  ]
+}

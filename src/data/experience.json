@@ -1,0 +1,30 @@
+{
+  "experiences": [
+    {
+      "title": "Senior Frontend Developer",
+      "company": "Tech Company Inc.",
+      "location": "City, Country",
+      "startDate": "Jan 2022",
+      "endDate": "Present",
+      "description": "Lead the frontend development team in building and maintaining web applications. Implemented new features and optimized performance.",
+      "achievements": [
+        "Reduced page load time by 40% through code optimization",
+        "Led the migration from legacy codebase to React and TypeScript",
+        "Mentored junior developers and conducted code reviews"
+      ]
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "Digital Agency",
+      "location": "City, Country",
+      "startDate": "Mar 2020",
+      "endDate": "Dec 2021",
+      "description": "Developed responsive web applications for various clients. Collaborated with designers and backend developers.",
+      "achievements": [
+        "Built 10+ client websites using modern web technologies",
+        "Implemented CI/CD pipelines to streamline deployment process",
+        "Created reusable component library reducing development time by 30%"
+      ]
+    }
+  ]
+}

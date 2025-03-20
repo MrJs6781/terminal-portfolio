@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "E-commerce Platform",
+      "description": "A full-stack e-commerce application with user authentication, product catalog, shopping cart, and payment integration.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "githubUrl": "https://github.com/yourusername/ecommerce",
+      "liveUrl": "https://yourproject.com",
+      "imageUrl": "/images/projects/ecommerce.jpg",
+      "featured": true
+    },
+    {
+      "id": "project2",
+      "title": "Task Management App",
+      "description": "A Kanban-style task management application with drag-and-drop functionality and team collaboration features.",
+      "technologies": ["React", "Firebase", "Tailwind CSS"],
+      "githubUrl": "https://github.com/yourusername/task-app",
+      "liveUrl": "https://yourtaskapp.com",
+      "imageUrl": "/images/projects/task-app.jpg",
+      "featured": true
+    },
+    {
+      "id": "project3",
+      "title": "Weather Dashboard",
+      "description": "A weather application that displays current and forecasted weather data for multiple locations.",
+      "technologies": ["JavaScript", "OpenWeather API", "Chart.js"],
+      "githubUrl": "https://github.com/yourusername/weather-app",
+      "liveUrl": "https://yourweatherapp.com",
+      "imageUrl": "/images/projects/weather.jpg",
+      "featured": false
+    }
+  ]
+}

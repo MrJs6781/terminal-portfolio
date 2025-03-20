@@ -1,0 +1,20 @@
+{
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University Name",
+      "location": "City, Country",
+      "startDate": "Sep 2016",
+      "endDate": "Jun 2020",
+      "description": "Focused on software engineering and web development."
+    },
+    {
+      "degree": "Full Stack Web Development Bootcamp",
+      "institution": "Coding Academy",
+      "location": "City, Country",
+      "startDate": "Jan 2020",
+      "endDate": "Mar 2020",
+      "description": "Intensive coding bootcamp focused on modern web technologies."
+    }
+  ]
+}
