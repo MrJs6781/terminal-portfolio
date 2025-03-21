@@ -33,7 +33,7 @@ const Terminal: React.FC = () => {
   const [commandHistory, setCommandHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState<number>(-1);
   const [themes] = useState<Theme[]>(themesData.themes);
-  const [currentTheme, setCurrentTheme] = useState<Theme>(themesData.themes[5]);
+  const [currentTheme, setCurrentTheme] = useState<Theme>(themesData.themes[2]);
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
 
