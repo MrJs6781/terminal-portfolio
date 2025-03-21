@@ -41,6 +41,10 @@
       "description": "Changes the terminal theme"
     },
     {
+      "name": "language",
+      "description": "Changes the display language"
+    },
+    {
       "name": "clear",
       "description": "Clears the terminal"
     }
