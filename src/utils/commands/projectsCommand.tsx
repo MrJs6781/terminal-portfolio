@@ -2,6 +2,7 @@
 import React from "react";
 import projectsData from "@/data/projects.json";
 import { Theme } from "@/components/Terminal";
+import { Project } from "@/types";
 
 export const processProjectsCommand = (
   translate: (key: string, params?: Record<string, string>) => string,
@@ -13,7 +14,7 @@ export const processProjectsCommand = (
         {translate("projects_title")}
       </p>
       <div className="space-y-4">
-        {projectsData.projects.map((project: any, index: number) => (
+        {projectsData.projects.map((project: Project, index: number) => (
           <div
             key={index}
             className="border border-gray-700 p-3 rounded bg-gray-900"

@@ -2,6 +2,7 @@
 import React from "react";
 import contactData from "@/data/contact.json";
 import { Theme } from "@/components/Terminal";
+import { ContactSocial } from "@/types";
 
 export const processContactCommand = (
   translate: (key: string, params?: Record<string, string>) => string,
@@ -33,7 +34,7 @@ export const processContactCommand = (
         {translate("social_media")}
       </p>
       <div className="flex flex-wrap gap-3">
-        {contactData.socials.map((social: any, index: number) => (
+        {contactData.socials.map((social: ContactSocial, index: number) => (
           <a
             key={index}
             href={social.url}

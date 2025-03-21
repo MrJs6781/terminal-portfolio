@@ -119,10 +119,10 @@ export const processCommand = async ({
         } else {
           output = (
             <p className={`text-[${currentTheme.errorColor}]`}>
-              Theme "{themeName}" not found. Type{" "}
+              Theme {themeName} not found. Type
               <span className={`text-[${currentTheme.highlightColor}]`}>
                 themes
-              </span>{" "}
+              </span>
               to see available themes.
             </p>
           );

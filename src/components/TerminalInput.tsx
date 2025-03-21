@@ -1,5 +1,4 @@
-// components/TerminalInput.tsx
-import React, { KeyboardEvent, useRef } from "react";
+import React, { KeyboardEvent } from "react"; // حذف useRef
 import { useLanguage } from "@/contexts/LanguageContext";
 import commandsData from "@/data/commands.json";
 
@@ -70,7 +69,7 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
       e.preventDefault();
       handleTabCompletion();
     } else if (e.key === "Enter") {
-      handleSubmit(e as any);
+      handleSubmit(e); // حذف as any
     }
   };
 

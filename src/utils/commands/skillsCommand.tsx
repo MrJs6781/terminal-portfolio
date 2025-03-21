@@ -2,6 +2,7 @@
 import React from "react";
 import skillsData from "@/data/skills.json";
 import { Theme } from "@/components/Terminal";
+import { SkillChild } from "@/types";
 
 export const processSkillsCommand = (
   translate: (key: string, params?: Record<string, string>) => string,
@@ -17,7 +18,7 @@ export const processSkillsCommand = (
           {translate("languages")}
         </p>
         <div className="flex flex-wrap gap-2">
-          {skillsData.languages.map((skill: any, index: number) => (
+          {skillsData.languages.map((skill: SkillChild, index: number) => (
             <span
               key={index}
               className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-sm"
@@ -33,7 +34,7 @@ export const processSkillsCommand = (
           {translate("frameworks")}
         </p>
         <div className="flex flex-wrap gap-2">
-          {skillsData.frameworks.map((skill: any, index: number) => (
+          {skillsData.frameworks.map((skill: SkillChild, index: number) => (
             <span
               key={index}
               className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-sm"
@@ -49,7 +50,7 @@ export const processSkillsCommand = (
           {translate("tools")}
         </p>
         <div className="flex flex-wrap gap-2">
-          {skillsData.tools.map((skill: any, index: number) => (
+          {skillsData.tools.map((skill: SkillChild, index: number) => (
             <span
               key={index}
               className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-sm"

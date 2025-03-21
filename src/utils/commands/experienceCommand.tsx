@@ -2,6 +2,7 @@
 import React from "react";
 import experienceData from "@/data/experience.json";
 import { Theme } from "@/components/Terminal";
+import { Experience } from "@/types";
 
 export const processExperienceCommand = (
   translate: (key: string, params?: Record<string, string>) => string,
@@ -13,7 +14,7 @@ export const processExperienceCommand = (
         {translate("experience_title")}
       </p>
       <div className="space-y-4">
-        {experienceData.experiences.map((job: any, index: number) => (
+        {experienceData.experiences.map((job: Experience, index: number) => (
           <div key={index} className="border-l-2 border-gray-700 pl-4">
             <div className="flex justify-between mb-1">
               <h3 className={`text-[${currentTheme.highlightColor}] font-bold`}>

@@ -2,6 +2,7 @@
 import React from "react";
 import educationData from "@/data/education.json";
 import { Theme } from "@/components/Terminal";
+import { Education } from "@/types";
 
 export const processEducationCommand = (
   translate: (key: string, params?: Record<string, string>) => string,
@@ -13,7 +14,7 @@ export const processEducationCommand = (
         {translate("education_title")}
       </p>
       <div className="space-y-4">
-        {educationData.education.map((edu: any, index: number) => (
+        {educationData.education.map((edu: Education, index: number) => (
           <div key={index} className="border-l-2 border-gray-700 pl-4">
             <div className="flex justify-between mb-1">
               <h3 className={`text-[${currentTheme.highlightColor}] font-bold`}>
