@@ -1,6 +1,6 @@
 // components/TerminalInput.tsx
 import React, { KeyboardEvent, useRef } from "react";
-import { useLanguage } from "@/contexts/LanguageContext"; // اضافه کردن هوک زبان
+import { useLanguage } from "@/contexts/LanguageContext";
 import commandsData from "@/data/commands.json";
 
 interface TerminalHistoryItem {
@@ -42,7 +42,7 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
   onSubmit,
   inputRef,
 }) => {
-  const { isRtl, translate } = useLanguage(); // اضافه کردن isRtl
+  const { isRtl, translate, currentFont } = useLanguage();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -70,7 +70,7 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
       e.preventDefault();
       handleTabCompletion();
     } else if (e.key === "Enter") {
-      handleSubmit(e as any); // فراخوانی سابمیت با Enter
+      handleSubmit(e as any);
     }
   };
 
@@ -141,6 +141,7 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
         style={{
           direction: isRtl ? "rtl" : "ltr",
           textAlign: isRtl ? "right" : "left",
+          fontFamily: currentFont,
         }}
         placeholder={translate("type_command") || "Type a command..."}
         autoFocus

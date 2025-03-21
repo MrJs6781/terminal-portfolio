@@ -1,5 +1,6 @@
 // app/layout.tsx
 import "@/app/globals.css";
+import "../styles/fonts.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import profileData from "@/data/profile.json";

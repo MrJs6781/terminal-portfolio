@@ -1,6 +1,6 @@
 // components/TerminalHistory.tsx
 import React from "react";
-import { useLanguage } from "@/contexts/LanguageContext"; // اضافه کردن هوک زبان
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TerminalHistoryItem {
   command: string;
@@ -27,13 +27,14 @@ const TerminalHistory: React.FC<TerminalHistoryProps> = ({
   history,
   currentTheme,
 }) => {
-  const { isRtl } = useLanguage(); // اضافه کردن isRtl
+  const { isRtl, currentFont } = useLanguage();
 
   return (
     <div
       style={{
         direction: isRtl ? "rtl" : "ltr",
         textAlign: isRtl ? "right" : "left",
+        fontFamily: currentFont,
       }}
     >
       {history.map((item, index) => (

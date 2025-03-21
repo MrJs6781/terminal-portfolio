@@ -22,11 +22,24 @@ export const languageLabels: Record<Language, string> = {
   fa: "فارسی",
 };
 
+// نگاشت زبان به فونت
+export const languageFonts: Record<Language, string> = {
+  en: "Inter",
+  fr: "Roboto",
+  es: "Lora",
+  de: "Source Sans Pro",
+  zh: "Noto Sans SC",
+  ja: "Noto Sans JP",
+  ar: "Amiri",
+  fa: "Vazir",
+};
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
   translate: (key: string) => string;
   isRtl: boolean;
+  currentFont: string; // اضافه کردن فونت فعلی
 }
 
 const defaultValue: LanguageContextType = {
@@ -34,6 +47,7 @@ const defaultValue: LanguageContextType = {
   setLanguage: () => {},
   translate: (key: string) => key,
   isRtl: false,
+  currentFont: "Inter",
 };
 
 const LanguageContext = createContext<LanguageContextType>(defaultValue);
@@ -66,6 +80,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   const [language, setLanguage] = useState<Language>(initialLanguage);
   const [translations, setTranslations] = useState<Translations>({});
   const [isRtl, setIsRtl] = useState(false);
+  const [currentFont, setCurrentFont] = useState<string>(
+    languageFonts[initialLanguage]
+  );
 
   useEffect(() => {
     const loadTranslations = async () => {
@@ -76,6 +93,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
           [language]: langData.default,
         }));
         setIsRtl(["ar", "fa"].includes(language));
+        setCurrentFont(languageFonts[language]); // تنظیم فونت بر اساس زبان
         localStorage.setItem("preferred-language", language);
         document.documentElement.lang = language;
         document.documentElement.dir = isRtl ? "rtl" : "ltr";
@@ -98,12 +116,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   }, []);
 
   const translate = (key: string): string => {
-    return translations[language]?.[key] || key; // فقط کلید رو برگردون، بدون فال‌بک به انگلیسی
+    return translations[language]?.[key] || key;
   };
 
   return (
     <LanguageContext.Provider
-      value={{ language, setLanguage, translate, isRtl }}
+      value={{ language, setLanguage, translate, isRtl, currentFont }}
     >
       {children}
     </LanguageContext.Provider>

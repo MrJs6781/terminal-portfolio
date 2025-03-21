@@ -37,6 +37,7 @@ interface CommandProcessorArgs {
   setCommandHistory: (history: string[]) => void;
   setHistoryIndex: (index: number) => void;
   themes: Theme[];
+  language: string; // اضافه کردن language به آرگومان‌ها
 }
 
 export const processCommand = async ({
@@ -49,6 +50,7 @@ export const processCommand = async ({
   setCommandHistory,
   setHistoryIndex,
   themes,
+  language,
 }: CommandProcessorArgs) => {
   const cmd = command.trim().toLowerCase();
 
@@ -99,7 +101,7 @@ export const processCommand = async ({
       );
       break;
     case "language":
-      output = processLanguageCommand(translate, currentTheme);
+      output = processLanguageCommand(translate, currentTheme, language); // پاس دادن language
       break;
     default:
       if (cmd.startsWith("theme ")) {

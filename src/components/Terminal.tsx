@@ -26,7 +26,7 @@ export interface Theme {
 }
 
 const Terminal: React.FC = () => {
-  const { translate, language } = useLanguage();
+  const { translate, language, currentFont, isRtl } = useLanguage(); // اضافه کردن currentFont
   const [input, setInput] = useState<string>("");
   const [history, setHistory] = useState<TerminalHistoryItem[]>([]);
   const [isInitialized, setIsInitialized] = useState<boolean>(false);
@@ -34,49 +34,53 @@ const Terminal: React.FC = () => {
   const [historyIndex, setHistoryIndex] = useState<number>(-1);
   const [themes] = useState<Theme[]>(themesData.themes);
   const [currentTheme, setCurrentTheme] = useState<Theme>(themesData.themes[5]);
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
 
   const welcomeText = `
-  ██████╗ ███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗     
-  ██╔══██╗██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║     
-  ██████╔╝█████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║     
-  ██╔══██╗██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║     
-  ██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗
-  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
+  ██████  ███████╗ ██████╗  ███╗   ███╗ ██╗ ███╗   ██╗  █████╗  ██╗     
+    ██    ██╔════╝ ██╔══██╗ ████╗ ████║ ██║ ████╗  ██║ ██╔══██╗ ██║     
+    ██    █████╗   ██████╔╝ ██╔████╔██║ ██║ ██╔██╗ ██║ ███████║ ██║     
+    ██    ██╔══╝   ██╔══██╗ ██║╚██╔╝██║ ██║ ██║╚██╗██║ ██╔══██╗ ██║     
+    ██    ███████╗ ██║  ██║ ██║ ╚═╝ ██║ ██║ ██║ ╚████║ ██║  ██║ ███████╗
+    ╚═╝   ╚══════╝ ╚═╝  ╚═╝ ╚═╝     ╚═╝ ╚═╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝
   `;
 
-  // Initialize terminal with welcome message
   useEffect(() => {
-    console.log("Current Theme:", currentTheme);
     if (!isInitialized) {
       const welcomeOutput = (
         <div className={`text-[${currentTheme.successColor}]`}>
           <motion.pre
-            className="text-xs md:text-sm font-mono mb-2"
+            className="text-sm mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
+            style={{
+              direction: isRtl ? "rtl" : "ltr",
+              textAlign: isRtl ? "right" : "left",
+            }} // هماهنگی با RTL
           >
             {welcomeText.split("").map((char, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.02 }}
+                transition={{ delay: index * 0.006 }}
               >
                 {char}
               </motion.span>
             ))}
           </motion.pre>
-          <p className="mb-2">{translate("welcome_message")}</p>
-          <p>{translate("best_viewed_on")}</p>
+          <p className="mb-2 text-sm md:text-base">
+            {translate("welcome_message")}
+          </p>
+          <p className="text-sm md:text-base">{translate("best_viewed_on")}</p>
         </div>
       );
       setHistory([{ command: "", output: welcomeOutput }]);
       setIsInitialized(true);
     }
-  }, [isInitialized, currentTheme, translate, welcomeText]);
+  }, [isInitialized, currentTheme, translate, welcomeText, isRtl]); // اضافه کردن isRtl به وابستگی‌ها
 
   useEffect(() => {
     setIsInitialized(false);
@@ -109,13 +113,17 @@ const Terminal: React.FC = () => {
       setCommandHistory,
       setHistoryIndex,
       themes,
+      language,
     });
     setInput("");
   };
 
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="bg-gray-800 text-white p-2 flex items-center justify-between rounded-t-md">
+      <div
+        className="bg-gray-800 text-white p-2 flex items-center justify-between rounded-t-md"
+        style={{ direction: "ltr" }}
+      >
         <TerminalHeader />
         <LanguageSelector />
       </div>
@@ -125,6 +133,7 @@ const Terminal: React.FC = () => {
         style={{
           backgroundColor: currentTheme.backgroundColor,
           color: currentTheme.textColor,
+          fontFamily: currentFont, // اعمال فونت فعلی
         }}
       >
         <TerminalHistory history={history} currentTheme={currentTheme} />
