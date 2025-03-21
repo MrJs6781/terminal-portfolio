@@ -1,5 +1,6 @@
 // components/TerminalHistory.tsx
 import React from "react";
+import { useLanguage } from "@/contexts/LanguageContext"; // اضافه کردن هوک زبان
 
 interface TerminalHistoryItem {
   command: string;
@@ -26,13 +27,24 @@ const TerminalHistory: React.FC<TerminalHistoryProps> = ({
   history,
   currentTheme,
 }) => {
+  const { isRtl } = useLanguage(); // اضافه کردن isRtl
+
   return (
-    <>
+    <div
+      style={{
+        direction: isRtl ? "rtl" : "ltr",
+        textAlign: isRtl ? "right" : "left",
+      }}
+    >
       {history.map((item, index) => (
         <div key={index} className="mb-4">
           {item.command && (
             <div className="flex items-center mb-1">
-              <span className={`text-[${currentTheme.promptColor}] mr-2`}>
+              <span
+                className={`text-[${currentTheme.promptColor}] ${
+                  isRtl ? "ml-2" : "mr-2"
+                }`}
+              >
                 $
               </span>
               <span className={`text-[${currentTheme.textColor}]`}>
@@ -40,10 +52,10 @@ const TerminalHistory: React.FC<TerminalHistoryProps> = ({
               </span>
             </div>
           )}
-          <div className="ml-4">{item.output}</div>
+          <div className={isRtl ? "mr-4" : "ml-4"}>{item.output}</div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

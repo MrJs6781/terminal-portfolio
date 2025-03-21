@@ -1,5 +1,6 @@
 // components/TerminalInput.tsx
 import React, { KeyboardEvent, useRef } from "react";
+import { useLanguage } from "@/contexts/LanguageContext"; // اضافه کردن هوک زبان
 import commandsData from "@/data/commands.json";
 
 interface TerminalHistoryItem {
@@ -41,6 +42,8 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
   onSubmit,
   inputRef,
 }) => {
+  const { isRtl, translate } = useLanguage(); // اضافه کردن isRtl
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
@@ -66,6 +69,8 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
     } else if (e.key === "Tab") {
       e.preventDefault();
       handleTabCompletion();
+    } else if (e.key === "Enter") {
+      handleSubmit(e as any); // فراخوانی سابمیت با Enter
     }
   };
 
@@ -79,8 +84,15 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
       setInput(matchingCommands[0]);
     } else if (matchingCommands.length > 1) {
       const completionsOutput = (
-        <div>
-          <p className="text-gray-400 mb-1">Available completions:</p>
+        <div
+          style={{
+            direction: isRtl ? "rtl" : "ltr",
+            textAlign: isRtl ? "right" : "left",
+          }}
+        >
+          <p className="text-gray-400 mb-1">
+            {translate("available_completions") || "Available completions:"}
+          </p>
           <div className="flex flex-wrap gap-2">
             {matchingCommands.map((cmd, index) => (
               <span
@@ -107,8 +119,18 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center">
-      <span className={`text-[${currentTheme.promptColor}] mr-2`}>$</span>
+    <form
+      onSubmit={handleSubmit}
+      className="flex items-center"
+      style={{ direction: isRtl ? "rtl" : "ltr" }}
+    >
+      <span
+        className={`text-[${currentTheme.promptColor}] ${
+          isRtl ? "ml-2" : "mr-2"
+        }`}
+      >
+        $
+      </span>
       <input
         ref={inputRef}
         type="text"
@@ -116,6 +138,11 @@ const TerminalInput: React.FC<TerminalInputProps> = ({
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
         className={`flex-1 bg-transparent outline-none text-[${currentTheme.textColor}]`}
+        style={{
+          direction: isRtl ? "rtl" : "ltr",
+          textAlign: isRtl ? "right" : "left",
+        }}
+        placeholder={translate("type_command") || "Type a command..."}
         autoFocus
       />
     </form>

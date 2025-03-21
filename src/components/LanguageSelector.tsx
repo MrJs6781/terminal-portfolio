@@ -1,4 +1,6 @@
 // components/LanguageSelector.tsx
+"use client";
+
 import React, { useState } from "react";
 import {
   useLanguage,
@@ -9,7 +11,7 @@ import { ChevronDown, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LanguageSelector: React.FC = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, isRtl } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
@@ -40,7 +42,9 @@ const LanguageSelector: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute z-10 mt-1 right-0 w-36 bg-gray-800 rounded shadow-lg py-1"
+            className={`absolute z-10 mt-1 w-36 bg-gray-800 rounded shadow-lg py-1 ${
+              isRtl ? "left-0" : "right-0"
+            }`}
           >
             {Object.entries(languageLabels).map(([langCode, langName]) => (
               <button
