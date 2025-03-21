@@ -3,7 +3,7 @@
     { "name": "JavaScript", "level": "Advanced" },
     { "name": "TypeScript", "level": "Advanced" },
     { "name": "HTML/CSS", "level": "Advanced" },
-    { "name": "Python", "level": "Intermediate" }
+    { "name": "Python", "level": "Beginner" }
   ],
   "frameworks": [
     { "name": "React", "level": "Advanced" },
@@ -14,7 +14,7 @@
   "tools": [
     { "name": "Git", "level": "Advanced" },
     { "name": "Docker", "level": "Intermediate" },
-    { "name": "AWS", "level": "Intermediate" },
-    { "name": "Figma", "level": "Intermediate" }
+    { "name": "AWS", "level": "Beginner" },
+    { "name": "Figma", "level": "Beginner" }
   ]
 }
